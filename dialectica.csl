@@ -249,7 +249,7 @@
         <text variable="title"/>
       </else-if>
       <else>
-        <text variable="title" text-case="title" quotes="true"/>
+        <text variable="title" quotes="true"/>
       </else>
     </choose>
   </macro>
@@ -642,7 +642,7 @@
       </group>
     </layout>
   </citation>
-  <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="———" entry-spacing="0">
+  <bibliography hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="—" entry-spacing="0">
     <sort>
       <key macro="contributors"/>
       <key variable="issued"/>
