@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="display-and-sort" page-range-format="expanded">
-  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Dialectica</title>
     <id>http://www.zotero.org/styles/dialectica</id>
@@ -39,10 +38,14 @@
     <contributor>
       <name>Denis Maier</name>
     </contributor>
+    <contributor>
+      <name>Luis Alejandro Bordo García</name>
+      <email>luis.bordo@philosophie.ch</email>
+    </contributor>
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>Based on the author-date variant of the Chicago style</summary>
-    <updated>2021-03-11T11:46:04+00:00</updated>
+    <updated>2024-03-13T17:09:28+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
