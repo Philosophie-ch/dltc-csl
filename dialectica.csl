@@ -45,7 +45,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>Based on the author-date variant of the Chicago style</summary>
-    <updated>2024-03-13T17:09:28+00:00</updated>
+    <updated>2024-03-13T17:14:15+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -63,7 +63,7 @@
         <group delimiter=". ">
           <names variable="editor translator" delimiter=". ">
             <label form="verb" text-case="capitalize-first" suffix=" "/>
-            <name and="text" delimiter=", "/>
+            <name font-variant="small-caps" and="text"/>
           </names>
           <names variable="director" delimiter=". ">
             <label form="verb" text-case="capitalize-first" suffix=" "/>
@@ -84,7 +84,7 @@
           </names>
           <names variable="editor translator" delimiter=", ">
             <label form="verb" suffix=" "/>
-            <name and="text" delimiter=", "/>
+            <name font-variant="small-caps" and="text"/>
           </names>
         </group>
       </if>
