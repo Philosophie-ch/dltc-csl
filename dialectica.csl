@@ -63,7 +63,9 @@
         <group delimiter=". ">
           <names variable="editor translator" delimiter=". ">
             <label form="verb" text-case="capitalize-first" suffix=" "/>
-            <name font-variant="small-caps" and="text"/>
+            <name and="text">
+              <name-part name="family" font-variant="small-caps"/>
+            </name>
           </names>
           <names variable="director" delimiter=". ">
             <label form="verb" text-case="capitalize-first" suffix=" "/>
@@ -84,7 +86,9 @@
           </names>
           <names variable="editor translator" delimiter=", ">
             <label form="verb" suffix=" "/>
-            <name font-variant="small-caps" and="text"/>
+            <name and="text">
+              <name-part name="family" font-variant="small-caps"/>
+            </name>
           </names>
         </group>
       </if>
@@ -513,7 +517,7 @@
           <else>
             <group delimiter=" ">
               <text variable="collection-title" text-case="title"/>
-              <text variable="collection-number"/>
+              <text variable="collection-number" prefix="n. "/>
             </group>
           </else>
         </choose>
