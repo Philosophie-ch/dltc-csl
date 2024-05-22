@@ -33,28 +33,25 @@ if [ ! -d "${DLTC_CSL_DIRECTORY}" ]; then
     exit 1
 fi
 
-bak_dir="${DLTC_CSL_DIRECTORY}/csl-bak"
-hash=$(date +"%Y-%m-%d_%H-%M-%S")
-hash+="_${USER}"
+# Check if dialectica.csl exists
+if [ ! -f "dialectica.csl" ]; then
+    printf 'Error: dialectica.csl does not exist locally.\n' >&2
+    exit 1
+fi
+
+# Check if source dialectica.csl exists in DLTC_CSL_DIRECTORY
+if [ ! -f "${DLTC_CSL_DIRECTORY}/dialectica.csl" ]; then
+    printf "Error: dialectica.csl does not exist in ${DLTC_CSL_DIRECTORY}.\n" >&2
+    exit 1
+fi
 
 
 ############
 # MAIN
 ############
 
-# Prompt user to confirm deployment
-read -p "Are you sure you want to deploy the dialectica.csl to ${DLTC_CSL_DIRECTORY}? (y/n) " -n 1 -r
-
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    printf "\nDeployment aborted.\n"
-    exit 1
-fi
-
-# Deploy safely
-printf "\n\nWill create a back-up from\n\t${DLTC_CSL_DIRECTORY}/dialectica.csl\n to\n\t${bak_dir}/dialectica.csl.bak.${hash}"
-mkdir -p "${bak_dir}" && \
-mv "${DLTC_CSL_DIRECTORY}/dialectica.csl" "${bak_dir}/dialectica.csl_${hash}" && \
-cp "dialectica.csl" "${DLTC_CSL_DIRECTORY}/dialectica.csl" && \
-printf "\n\nSuccessfully deployed local dialectica.csl to\n\t${DLTC_CSL_DIRECTORY}/dialectica.csl\n"
-
+printf "\nRemoving local dialectica.csl from ${PWD}"
+rm -rf "dialectica.csl" && \
+cp "${DLTC_CSL_DIRECTORY}/dialectica.csl" "dialectica.csl"  && \
+printf "\n\nSuccessfully imported dialectica.csl from\n\t${DLTC_CSL_DIRECTORY}/dialectica.csl\n"
 
