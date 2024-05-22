@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+function help_msg {
+
+ cat <<EOF
+Usage:
+    $0 [FILE]
+    cat [FILE.bib] | $0
+    echo "@article{...}" | $0
+
+Convert BibLaTeX data to CSL JSON.
+
+If FILE is not provided, the BibLaTeX data is read from stdin.
+
+EOF
+}
+
+case $1 in
+    "-h" | "--help")
+        help_msg
+        exit 0
+        ;;
+esac
+
+
+
+### Main script ###
+
+if [[ -n $1 ]]; then
+
+    # If a file name is provided as an argument, read from the file
+    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson "${1}"
+
+else
+    # Otherwise, read from stdin
+    # Check if the input is empty
+    if [ -t 0 ]; then
+        help_msg
+        exit 1
+    fi
+
+    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson -
+
+fi
