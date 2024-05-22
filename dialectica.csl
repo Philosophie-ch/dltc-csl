@@ -473,7 +473,7 @@
         </group>
       </if>
       <else-if variable="status">
-        <text variable="status" text-case="capitalize-first"/>
+        <text variable="status"/>
       </else-if>
       <else>
         <text term="no date" form="short"/>
