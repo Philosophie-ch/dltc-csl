@@ -672,8 +672,8 @@
       <text macro="collection-title" prefix=". "/>
       <text macro="issue"/>
       <text macro="locators-article"/>
+      <text variable="note" text-case="capitalize-first" prefix=". " suffix=","/>
       <text macro="access" prefix=", "/>
-      <text variable="note" text-case="capitalize-first" prefix=". " suffix="."/>
     </layout>
   </bibliography>
 </style>
