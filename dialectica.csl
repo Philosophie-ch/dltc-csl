@@ -639,7 +639,7 @@
             </group>
           </if>
           <else>
-            <group delimiter=", ">
+            <group delimiter=" ">
               <text macro="contributors-short"/>
               <text macro="date-in-text"/>
             </group>
