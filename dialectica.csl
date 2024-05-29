@@ -151,7 +151,7 @@
   </macro>
   <macro name="contributors-short">
     <names variable="author">
-      <name form="short" and="text" delimiter=", " initialize-with=". " delimiter-precedes-last="never"/>
+      <name form="short" and="text" delimiter=", " initialize-with=". " delimiter-precedes-last="never" name-as-sort-order="all"/>
       <substitute>
         <names variable="editor"/>
         <names variable="translator"/>
