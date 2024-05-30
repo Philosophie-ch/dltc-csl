@@ -673,7 +673,7 @@
       <text macro="collection-title" prefix=". "/>
       <text macro="issue"/>
       <text macro="locators-article"/>
-      <text variable="note" prefix=". " suffix=","/>
+      <text variable="note" prefix=". "/>
       <text macro="access" prefix=", "/>
     </layout>
   </bibliography>
