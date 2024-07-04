@@ -45,7 +45,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>Based on the author-date variant of the Chicago style</summary>
-    <updated>2024-05-23T13:35:04+00:00</updated>
+    <updated>2024-07-04T12:35:31+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -427,7 +427,7 @@
             <number variable="volume" form="numeric" suffix=":"/>
           </else-if>
         </choose>
-        <text variable="locator"/>
+        <text variable="locator" prefix=" "/>
       </if>
     </choose>
   </macro>
