@@ -29,7 +29,7 @@ esac
 if [[ -n $1 ]]; then
 
     # If a file name is provided as an argument, read from the file
-    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson "${1}"
+    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson --metadata preserve-tabs "${1}"
 
 else
     # Otherwise, read from stdin
@@ -39,6 +39,6 @@ else
         exit 1
     fi
 
-    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson -
+    LANG=en_US.UTF-8 pandoc --from biblatex --to csljson --metadata preserve-tabs -
 
 fi
